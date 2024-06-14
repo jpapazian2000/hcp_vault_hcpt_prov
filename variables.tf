@@ -12,7 +12,7 @@ variable "cluster_id" {
 variable "hcp_project_id" {
     description = "sanofi project"
     type = string 
-    default = "chc_sanofi"
+    default = "3ee83a5b-9068-4c8b-933b-70e4229ac3ac"
 }
 
 variable "region" {
