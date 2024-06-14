@@ -1,5 +1,5 @@
 output "cluster_name" {
-    value = var.hcp_vault_cluster.cluster_id
+    value = var.hcp_vault_cluster.sanofi_hcp_vault.cluster_id
 }
 
 output "project_id" {
@@ -11,5 +11,5 @@ output "project_name" {
 }
 
 output "vault_public_url" {
-    value = data.hcp_vault_cluster.vault_public_endpoint_url
+    value = data.hcp_vault_cluster.sanofi_hcp_vault.vault_public_endpoint_url
 }
