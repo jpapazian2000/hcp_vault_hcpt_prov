@@ -1,5 +1,5 @@
 data "hcp_project" "sanofi" {
-    project = var.hcp_project_id
+    name = var.hcp_project_id
 }
 data "hcp_hvn" "sanofi" {
   hvn_id = var.hvn_id
