@@ -11,8 +11,8 @@ data "hcp_hvn" "sanofi" {
   #region         = var.region
 #}
 
-resource "hcp_vault_cluster" "learn_hcp_vault" {
-  hvn_id     = data.hcp_hvn.sanofi.id
+resource "hcp_vault_cluster" "sanofi_hcp_vault" {
+  hvn_id     = data.hcp_hvn.sanofi.hvn_id
   cluster_id = var.cluster_id
   tier       = var.tier
   # public_endpoint = true
