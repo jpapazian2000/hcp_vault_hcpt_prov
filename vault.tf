@@ -1,5 +1,8 @@
+data "hcp_hvn" "sanofi" {
+  hvn_id = var.hvn_id
+}
 resource "hcp_hvn" "learn_hcp_vault_hvn" {
-  hvn_id         = var.hvn_id
+  hvn_id         = data.hcp_hvn.sanofi
   cloud_provider = var.cloud_provider
   region         = var.region
 }
