@@ -15,5 +15,6 @@ resource "hcp_vault_cluster" "sanofi_hcp_vault" {
   hvn_id     = data.hcp_hvn.sanofi.hvn_id
   cluster_id = var.cluster_id
   tier       = var.tier
+  public_endpoint = true
   # public_endpoint = true
 }
