@@ -1,9 +1,9 @@
 output "cluster_name" {
-    value = var.hcp_vault_cluster.sanofi_hcp_vault.cluster_id
+    value = hcp_vault_cluster.sanofi_hcp_vault.cluster_id
 }
 
 output "project_id" {
-    value = hcp_project.sanofi.resource_id
+    value = data.hcp_project.sanofi.resource_id
 }
 
 output "project_name" {
