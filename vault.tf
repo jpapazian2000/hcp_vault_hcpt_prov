@@ -1,6 +1,9 @@
+data "hcp_project" "sanofi" {
+    project = var.hcp_project_id
+}
 data "hcp_hvn" "sanofi" {
   hvn_id = var.hvn_id
-  project_id = var.hcp_project_id
+  project_id = data.hcp_project.sanofi.resource_id
 }
 resource "hcp_hvn" "learn_hcp_vault_hvn" {
   hvn_id         = data.hcp_hvn.sanofi.id
