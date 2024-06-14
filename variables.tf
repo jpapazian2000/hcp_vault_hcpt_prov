@@ -9,6 +9,11 @@ variable "cluster_id" {
   type        = string
   default     = "sanofi-vault-cluster"
 }
+variable "hcp_project_id" {
+    description = "sanofi project"
+    type = string 
+    default = "chc_sanofi"
+}
 
 variable "region" {
   description = "The region of the HCP HVN and Vault cluster."
