@@ -23,7 +23,7 @@ resource "vault_generic_endpoint" "dw_admin" {
 
   data_json = <<EOT
 {
-  "policies": ["dw_all_policy"],
+  "policies": ["dw_policy"],
   "password": "changeme"
 }
 EOT
