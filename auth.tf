@@ -17,31 +17,31 @@ provider "vault" {
 } 
 
 resource "vault_namespace" "allergy_ns" {
-  path = "admin/a"
+  path = "a"
   custom_metadata = {
     type = "allergy BU"
   }
 }
 resource "vault_namespace" "ccf_ns" {
-  path = "admin/ccf"
+  path = "ccf"
   custom_metadata = {
     type = "cough, clod and flu BU"
   }
 }
 resource "vault_namespace" "dw_ns" {
-  path = "admin/dw"
+  path = "dw"
   custom_metadata = {
     type = "digital wellness BU"
   }
 }
 resource "vault_namespace" "pc_ns" {
-  path = "admin/pc"
+  path = "pc"
   custom_metadata = {
     type = "pain care BU"
   }
 }
 resource "vault_namespace" "pmw_ns" {
-  path = "admin/pmw"
+  path = "pmw"
   custom_metadata = {
     type = "physical and mental wellness BU"
   }
@@ -49,7 +49,7 @@ resource "vault_namespace" "pmw_ns" {
 #enable an auth method (userpass for the demo), and create a 'security admin' user
 #this user will perform tasks such as ns creation,
 resource "vault_auth_backend" "userpass" {
-  namespace = "admin/dw"
+  namespace = "dw"
   type = "userpass"
   path = "chc_cybersecu"
 }
