@@ -9,12 +9,10 @@ terraform {
 
 provider "vault" {
   address = hcp_vault_cluster.sanofi_hcp_vault.vault_public_endpoint_url
-  auth_login {
-    path = "auth/userpass/login/${var.vault_admin_user}"
-
-    parameters = {
-      password = var.vault_admin_password
-    }
+  auth_login_userpass {
+    namespace = "admin"
+    username = var.vault_admin_user
+    password = var.vault_admin_password
   }
 } 
 
@@ -39,7 +37,7 @@ resource "vault_namespace" "dw_ns" {
 resource "vault_namespace" "pc_ns" {
   path = "admin/pc"
   custom_metadata = {
-    type = "paian care BU"
+    type = "pain care BU"
   }
 }
 resource "vault_namespace" "pmw_ns" {
