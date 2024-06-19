@@ -51,5 +51,5 @@ resource "vault_namespace" "pmw_ns" {
 resource "vault_auth_backend" "userpass" {
   namespace = "admin/dw"
   type = "userpass"
-  path = "chc_cybersecu"
+  #path = "chc_cybersecu"
 }
