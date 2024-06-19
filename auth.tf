@@ -20,23 +20,33 @@ provider "vault" {
 
 resource "vault_namespace" "allergy_ns" {
   path = "admin/a"
-  custom_metadata = "allergy BU"
+  custom_metadata = {
+    type = "allergy BU"
+  }
 }
 resource "vault_namespace" "ccf_ns" {
   path = "admin/ccf"
-  custom_metadata = "cough, cold and flu BU"
+  custom_metadata = {
+    type = "cough, clod and flu BU"
+  }
 }
 resource "vault_namespace" "dw_ns" {
   path = "admin/dw"
-  custom_metadata = "digital wellness BU"
+  custom_metadata = {
+    type = "digital wellness BU"
+  }
 }
 resource "vault_namespace" "pc_ns" {
   path = "admin/pc"
-  custom_metadata = "pain care BU"
+  custom_metadata = {
+    type = "paian care BU"
+  }
 }
 resource "vault_namespace" "pmw_ns" {
   path = "admin/pmw"
-  custom_metadata = "physical and mental wellness BU"
+  custom_metadata = {
+    type = "physical and mental wellness BU"
+  }
 }
 #enable an auth method (userpass for the demo), and create a 'security admin' user
 #this user will perform tasks such as ns creation,
