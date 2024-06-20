@@ -16,6 +16,6 @@ output "vault_public_url" {
 output "dw_namespace" {
     value = vault_namespace.dw_ns.path
 }
-output "dw_admin_user" {
-    value = vault_generic_endpoint.dw_admin.write_data["id"]
-}
+#output "dw_admin_user" {
+    #value = vault_generic_endpoint.dw_admin.write_data["id"]
+#}

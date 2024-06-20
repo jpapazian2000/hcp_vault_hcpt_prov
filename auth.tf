@@ -20,7 +20,7 @@ resource "vault_generic_endpoint" "dw_admin" {
   depends_on           = [vault_auth_backend.userpass]
   path                 = "auth/userpass/users/dw_admin"
   ignore_absent_fields = true
-  write_fields         = ["id"]
+  #write_fields         = ["id"]
 
   data_json = <<EOT
 {
