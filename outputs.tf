@@ -13,3 +13,6 @@ output "project_name" {
 output "vault_public_url" {
     value = hcp_vault_cluster.sanofi_hcp_vault.vault_public_endpoint_url
 }
+output "dw_namespace" {
+    value = vault_namespace.dw_ns.path
+}
