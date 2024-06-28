@@ -30,5 +30,5 @@ variable "cloud_provider" {
 variable "tier" {
   description = "Tier of the HCP Vault cluster. Valid options for tiers."
   type        = string
-  default     = "dev"
+  default     = "starter"
 }
